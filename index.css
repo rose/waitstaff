@@ -1,0 +1,23 @@
+.body {
+  font-style: Lucida Tahoma sans-serif;
+}
+
+div {
+  border: 2px solid black;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+#calculator {
+  width: 40%;
+  margin: 20px 5%;
+  float: left;
+}
+
+#charges, #earnings {
+  width: 40%;
+  margin: 20px 5%;
+  float: right;
+}
