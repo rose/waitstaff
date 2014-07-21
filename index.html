@@ -11,7 +11,25 @@
   <div class="header">Waitstaff Calculator</div>
   <div id="calculator" class="header-box">
     <div class="box-header">Calc header</div>
-    <div class="content">Calc body</div>
+    <div class="content">
+      <form 
+          name="mealForm"
+          ng-submit="pay(mealform.$valid)"
+          novalidate>
+        <div class="noborder">
+          Base Meal Price: $
+          <input ng-model="base" ng-pattern="\d+(\.\d{2})?" required>
+        </div>
+        <div class="noborder">
+          Tax Rate: %
+          <input ng-model="tax_percent" ng-pattern="\d+" required>
+        </div>
+        <div class="noborder">
+          Tip Percentage: %
+          <input ng-model="tip_percent" ng-pattern="\d+" required>
+        </div>
+      </form>
+    </div>
   </div>
   <div id="charges" class="header-box">
     <div class="box-header">Charges header</div>
