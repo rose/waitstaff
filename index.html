@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <title>Waiter Earnings Calculator</title>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+  <script src="index.js"></script>
   <link rel="stylesheet" href="index.css">
 </head>
-<body>
-  <div class="container">
+<body ng-app="waitCalculator">
+  <div class="container" ng-controller="waitCtrl">
   <div class="header">Waitstaff Calculator</div>
   <div id="calculator" class="header-box">
     <div class="box-header">Calc header</div>
@@ -33,7 +34,11 @@
   </div>
   <div id="charges" class="header-box">
     <div class="box-header">Charges header</div>
-    <div class="content">Charges body</div>
+    <div class="content">
+      <div class="noborder">Subtotal: {{subtotal}}</div>
+      <div class="noborder">Tip: {{tip}}</div>
+      <div class="noborder">Total: {{total_meal}}</div>
+    </div>
   </div>
   <div id="earnings" class="header-box">
     <div class="box-header">Earnings header</div>
