@@ -4,10 +4,13 @@
     $scope.subtotal = 0;
     $scope.tip = 0;
     $scope.total_meal = 0;
+    $scope.submitted = false;
 
-    var myParseFloat = function(str) {
-      var float_regex = /^(0|[1-9]\d*)(\.\d{2})?$/
-      return parseFloat(str.match(float_regex));
+    $scope.myParseFloat = function(str) {
+      var float_regex = /^(0|[1-9]\d*)(\.\d{1,2})?$/
+      var match = parseFloat(str.match(float_regex));
+      if (match != match) return false;
+      return match
     }
       
     var resetCalc = function() {
@@ -20,10 +23,11 @@
     }
 
     $scope.pay = function(isValid) {
+    $scope.submitted = true;
       if (isValid) {
-        var base = myParseFloat($scope.base);
-        var tax_percent = myParseFloat($scope.tax_percent);
-        var tip_percent = myParseFloat($scope.tip_percent);
+        var base = $scope.myParseFloat($scope.base);
+        var tax_percent = $scope.myParseFloat($scope.tax_percent);
+        var tip_percent = $scope.myParseFloat($scope.tip_percent);
         if (base === base && tax_percent === tax_percent && tip_percent === tip_percent) {
           $scope.subtotal = base * (1 + tax_percent/100);
           $scope.tip = $scope.subtotal * tip_percent/100;
