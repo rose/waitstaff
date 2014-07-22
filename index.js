@@ -29,7 +29,7 @@
         var base = $scope.myParseFloat($scope.base);
         var tax_percent = $scope.myParseFloat($scope.tax_percent);
         var tip_percent = $scope.myParseFloat($scope.tip_percent);
-        if (base === base && tax_percent === tax_percent && tip_percent === tip_percent) {
+        if (base !== false && tax_percent !== false && tip_percent !== false) {
           $scope.subtotal = base * (1 + tax_percent/100);
           $scope.tip = $scope.subtotal * tip_percent/100;
           $scope.total_meal = $scope.subtotal + $scope.tip;
