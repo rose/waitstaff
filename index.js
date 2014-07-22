@@ -1,12 +1,15 @@
 ;(function() {
   angular.module("waitCalculator", [])
   .controller("waitCtrl", function($scope) {
-    $scope.subtotal = 0;
-    $scope.tip = 0;
-    $scope.total_meal = 0;
-    $scope.total_tip = 0;
-    $scope.meal_count = 0;
-    $scope.avg_tip = 0;
+    var resetCharges = function() { $scope.subtotal = $scope.tip = $scope.total_meal = 0; }
+    var resetCalc = function() { $scope.base = $scope.tax_percent = $scope.tip_percent = ""; }
+    var resetEarnings = function() { $scope.total_tip = $scope.meal_count = $scope.avg_tip = 0; }
+
+    var init = function() { resetCharges(); resetEarnings(); }
+    $scope.resetTwo = function() { resetCalc(); resetCharges(); }
+    $scope.resetAll = function() { resetCharges(); resetCalc(); resetEarnings(); }
+
+    init();
 
     $scope.myParseFloat = function(str) {
       var float_regex = /^(0|[1-9]\d*)(\.\d{1,2})?$/
@@ -15,15 +18,6 @@
       return match
     }
       
-    var resetCalc = function() {
-      $scope.subtotal = $scope.tip = $scope.total_meal = 0;
-    }
-
-    $scope.resetTwo = function() {
-      resetCalc();
-      $scope.base = $scope.tax_percent = $scope.tip_percent = "";
-    }
-
     $scope.pay = function(isValid) {
       if (isValid) {
         var base = $scope.myParseFloat($scope.base);
