@@ -30,8 +30,8 @@
           $scope.total_tip += $scope.tip;
           $scope.meal_count += 1;
           $scope.avg_tip = $scope.total_tip / $scope.meal_count;
-        } else resetCalc();
-      } else resetCalc();
+        } else resetCharges();
+      } else resetCharges();
     }
   });
 })();
