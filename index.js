@@ -4,6 +4,9 @@
     $scope.subtotal = 0;
     $scope.tip = 0;
     $scope.total_meal = 0;
+    $scope.total_tip = 0;
+    $scope.meal_count = 0;
+    $scope.avg_tip = 0;
 
     $scope.myParseFloat = function(str) {
       var float_regex = /^(0|[1-9]\d*)(\.\d{1,2})?$/

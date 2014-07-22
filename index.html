@@ -43,7 +43,17 @@
   </div>
   <div id="earnings" class="header-box">
     <div class="box-header">Earnings header</div>
-    <div class="content">Earnings body</div>
+    <div class="content">
+      <div class="noborder">
+        Tip Total: {{total_tip | currency}}
+      </div>
+      <div class="noborder">
+        Meal Count: {{meal_count}}
+      </div>
+      <div class="noborder">
+        Average Tip Per Meal: {{avg_tip | currency}}
+      </div>
+    </div>
   </div>
   </div>
 </body>
