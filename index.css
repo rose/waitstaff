@@ -61,7 +61,12 @@ div {
 .content {
   height: 100%;
   margin-top: -2.4em;
-  padding: 2.4em 4px 4px 4px;
+  padding: 2.6em 2% 2% 2%;
+  position: relative;
+}
+
+#calculator .content {
+  padding-top: 3.6em;
 }
 
 #calculator {
@@ -73,14 +78,6 @@ div {
 #charges, #earnings {
   float: right;
   width: 30%;
-}
-
-#reset {
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-  font-size: 120%;
-  padding: 5px 10px;
 }
 
 .invalid {
@@ -98,3 +95,27 @@ div {
   width: 20%;
   min-width: 5em;
 }
+
+#button-holder {
+  position: absolute;
+  text-align: center;
+  bottom: 20px;
+  width: 100%;
+}
+
+button {
+  border: 2px solid black;
+  background: white;
+  color: black;
+  padding: 5px 10px;
+  margin: 10%;
+}
+
+#reset {
+  position: absolute;
+  margin: 0;
+  right: 20px;
+  bottom: 20px;
+  font-size: 120%;
+}
+

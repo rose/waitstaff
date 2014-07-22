@@ -29,7 +29,10 @@
           <div class="label">Tip Percentage: %</div>
           <input ng-model="tip_percent" ng-class="{ 'invalid': myParseFloat(tip_percent) === false }" required>
         </div>
-        <div class="noborder"><button ng-click="resetTwo()">Reset</button><input value="Submit" type="submit"></div>
+        <div class="noborder" id="button-holder">
+          <button ng-click="resetTwo()">Cancel</button>
+          <button type="submit">Submit</button>
+        </div>
       </form>
     </div>
   </div>
@@ -61,7 +64,7 @@
         </div>
       </div>
   </div>
-  <div id="reset" ng-click="resetAll()">Reset</div>
+  <button id="reset" ng-click="resetAll()">Reset</button>
   </div>
 </body>
 </html>
