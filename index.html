@@ -15,20 +15,21 @@
     <div class="content">
       <form 
           name="mealForm"
-          ng-submit="pay(mealform.$valid)"
+          ng-submit="pay(mealForm.$valid)"
           novalidate>
         <div class="noborder">
           Base Meal Price: $
-          <input ng-model="base" regex-validate="\d+" required>
+          <input ng-model="base" required>
         </div>
         <div class="noborder">
           Tax Rate: %
-          <input ng-model="tax_percent" regex-validate="\d+" required>
+          <input ng-model="tax_percent" required>
         </div>
         <div class="noborder">
           Tip Percentage: %
-          <input ng-model="tip_percent" regex-validate="\d+" required>
+          <input ng-model="tip_percent" required>
         </div>
+        <div class="noborder"><input value="Submit" type="submit"></div>
       </form>
     </div>
   </div>
