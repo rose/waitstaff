@@ -11,7 +11,7 @@
   <div class="container" ng-controller="waitCtrl">
   <div class="header">Waitstaff Calculator</div>
   <div id="calculator" class="header-box">
-    <div class="box-header">Calc header</div>
+    <div class="box-header">Enter the Meal Details</div>
     <div class="content">
       <form 
           name="mealForm"
@@ -34,7 +34,7 @@
     </div>
   </div>
   <div id="charges" class="header-box">
-    <div class="box-header">Charges header</div>
+    <div class="box-header">Customer Charges</div>
     <div class="content">
       <div class="noborder">Subtotal: {{subtotal | currency}}</div>
       <div class="noborder">Tip: {{tip | currency}}</div>
@@ -42,7 +42,7 @@
     </div>
   </div>
   <div id="earnings" class="header-box">
-    <div class="box-header">Earnings header</div>
+    <div class="box-header">My Earnings Info</div>
     <div class="content">
       <div class="noborder">
         Tip Total: {{total_tip | currency}}
