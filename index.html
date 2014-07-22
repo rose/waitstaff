@@ -18,15 +18,15 @@
           ng-submit="pay(mealForm.$valid)"
           novalidate>
         <div class="noborder">
-          Base Meal Price: $
+          <div class="label">Base Meal Price: $</div>
           <input ng-model="base" ng-class="{ 'invalid': myParseFloat(base) === false }" required>
         </div>
         <div class="noborder">
-          Tax Rate: %
+          <div class="label">Tax Rate: %</div>
           <input ng-model="tax_percent" ng-class="{ 'invalid': myParseFloat(tax_percent) === false }" required>
         </div>
         <div class="noborder">
-          Tip Percentage: %
+          <div class="label">Tip Percentage: %</div>
           <input ng-model="tip_percent" ng-class="{ 'invalid': myParseFloat(tip_percent) === false }" required>
         </div>
         <div class="noborder"><button ng-click="resetTwo()">Reset</button><input value="Submit" type="submit"></div>
@@ -35,25 +35,31 @@
   </div>
   <div id="charges" class="header-box">
     <div class="box-header">Customer Charges</div>
-    <div class="content">
-      <div class="noborder">Subtotal: {{subtotal | currency}}</div>
-      <div class="noborder">Tip: {{tip | currency}}</div>
-      <div class="noborder">Total: {{total_meal | currency}}</div>
-    </div>
+      <div class="content">
+        <div class="noborder">
+          <div class="label">Subtotal: </div><div class="data">{{subtotal | currency}}</div>
+        </div>
+        <div class="noborder">
+          <div class="label">Tip: </div><div class="data">{{tip | currency}}</div>
+        </div>
+        <div class="noborder">
+          <div class="label">Total: </div><div class="data">{{total_meal | currency}}</div>
+        </div>
+      </div>
   </div>
   <div id="earnings" class="header-box">
     <div class="box-header">My Earnings Info</div>
-    <div class="content">
-      <div class="noborder">
-        Tip Total: {{total_tip | currency}}
+      <div class="content">
+        <div class="noborder">
+          <div class="label">Tip Total: </div><div class="data">{{total_tip | currency}}</div>
+        </div>
+        <div class="noborder">
+          <div class="label">Meal Count: </div><div class="data">{{meal_count}}</div>
+        </div>
+        <div class="noborder">
+          <div class="label">Average Tip Per Meal: </div><div class="data">{{avg_tip | currency}}</div>
+        </div>
       </div>
-      <div class="noborder">
-        Meal Count: {{meal_count}}
-      </div>
-      <div class="noborder">
-        Average Tip Per Meal: {{avg_tip | currency}}
-      </div>
-    </div>
   </div>
   <div id="reset" ng-click="resetAll()">Reset</div>
   </div>

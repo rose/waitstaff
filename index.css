@@ -10,6 +10,7 @@ input {
   float: right;
   border: 1px solid black;
   padding: 2px;
+  margin-right: 20%;
 }
 
 div {
@@ -25,6 +26,7 @@ div {
 .noborder {
   border: none;
   padding: .3em;
+  width: 100%;
 }
 
 .container {
@@ -65,10 +67,12 @@ div {
 #calculator {
   float: left;
   height: 64%;
+  width: 50%;
 }
 
 #charges, #earnings {
   float: right;
+  width: 30%;
 }
 
 #reset {
@@ -81,4 +85,16 @@ div {
 
 .invalid {
   border: 1px solid red;
+}
+
+.data, .label {
+  display: inline-block;
+  text-align: right;
+  border: none;
+  width: 50%;
+}
+
+.data {
+  width: 20%;
+  min-width: 5em;
 }
