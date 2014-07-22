@@ -33,6 +33,9 @@
           $scope.subtotal = base * (1 + tax_percent/100);
           $scope.tip = $scope.subtotal * tip_percent/100;
           $scope.total_meal = $scope.subtotal + $scope.tip;
+          $scope.total_tip += $scope.tip;
+          $scope.meal_count += 1;
+          $scope.avg_tip = $scope.total_tip / $scope.meal_count;
         } else resetCalc();
       } else resetCalc();
     }
