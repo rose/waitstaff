@@ -19,15 +19,15 @@
           novalidate>
         <div class="noborder">
           Base Meal Price: $
-          <input ng-model="base" ng-pattern="\d+(\.\d{2})?" required>
+          <input ng-model="base" regex-validate="\d+" required>
         </div>
         <div class="noborder">
           Tax Rate: %
-          <input ng-model="tax_percent" ng-pattern="\d+" required>
+          <input ng-model="tax_percent" regex-validate="\d+" required>
         </div>
         <div class="noborder">
           Tip Percentage: %
-          <input ng-model="tip_percent" ng-pattern="\d+" required>
+          <input ng-model="tip_percent" regex-validate="\d+" required>
         </div>
       </form>
     </div>
@@ -35,9 +35,9 @@
   <div id="charges" class="header-box">
     <div class="box-header">Charges header</div>
     <div class="content">
-      <div class="noborder">Subtotal: {{subtotal}}</div>
-      <div class="noborder">Tip: {{tip}}</div>
-      <div class="noborder">Total: {{total_meal}}</div>
+      <div class="noborder">Subtotal: {{subtotal | currency}}</div>
+      <div class="noborder">Tip: {{tip | currency}}</div>
+      <div class="noborder">Total: {{total_meal | currency}}</div>
     </div>
   </div>
   <div id="earnings" class="header-box">
