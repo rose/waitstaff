@@ -14,11 +14,10 @@
           $scope.subtotal = base * (1 + tax_percent/100);
           $scope.tip = $scope.subtotal * tip_percent/100;
           $scope.total_meal = $scope.subtotal + $scope.tip;
-        } else {
-          $scope.subtotal = $scope.tip = $scope.total_meal = 0;
-        }
+        }       
+      } else {
+        $scope.subtotal = $scope.tip = $scope.total_meal = 0;
       }
     }
-
   });
 })();
