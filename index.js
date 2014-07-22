@@ -4,7 +4,6 @@
     $scope.subtotal = 0;
     $scope.tip = 0;
     $scope.total_meal = 0;
-    $scope.submitted = false;
 
     $scope.myParseFloat = function(str) {
       var float_regex = /^(0|[1-9]\d*)(\.\d{1,2})?$/
@@ -23,7 +22,6 @@
     }
 
     $scope.pay = function(isValid) {
-    $scope.submitted = true;
       if (isValid) {
         var base = $scope.myParseFloat($scope.base);
         var tax_percent = $scope.myParseFloat($scope.tax_percent);
